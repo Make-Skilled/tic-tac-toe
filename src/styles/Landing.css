@@ -1,0 +1,630 @@
+/* Landing Page - Matching Game Design */
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header */
+.landing-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.landing-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+}
+
+/* Main Content */
+.landing-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.landing-content {
+  text-align: center;
+  width: 100%;
+  max-width: 95vw;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.welcome-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+}
+
+.welcome-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 0 35px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 10px 30px rgba(33, 150, 243, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+  height: 48px;
+  box-sizing: border-box;
+  min-height: 48px;
+  vertical-align: top;
+}
+
+.start-button:hover {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(33, 150, 243, 0.6);
+}
+
+.help-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 35px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 200px;
+  white-space: nowrap;
+  height: 48px;
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 48px;
+  vertical-align: top;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.help-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.help-icon-new {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #673ab7, #512da8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(103, 58, 183, 0.3);
+}
+
+.help-text-new {
+  font-weight: 600;
+}
+
+/* Responsive Design */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .landing-page {
+    font-size: 18px;
+  }
+
+  .landing-header {
+    padding: 40px 32px;
+  }
+
+  .landing-title {
+    font-size: 2.8rem;
+  }
+
+  .landing-content {
+    padding: 60px 50px;
+    max-width: 900px;
+  }
+
+  .welcome-heading {
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+  }
+
+  .welcome-description {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    max-width: 700px;
+  }
+
+  .start-button {
+    width: 220px;
+    height: 52px;
+    font-size: 0.8rem;
+    padding: 0 40px;
+  }
+
+  .help-link {
+    width: 220px;
+    height: 52px;
+    font-size: 0.8rem;
+    padding: 0 40px;
+  }
+
+  .help-icon-new {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .landing-header {
+    padding: 35px 32px;
+  }
+
+  .landing-title {
+    font-size: 2.4rem;
+  }
+
+  .landing-content {
+    padding: 55px 45px;
+    max-width: 850px;
+  }
+
+  .welcome-heading {
+    font-size: 2.4rem;
+    margin-bottom: 22px;
+  }
+
+  .welcome-description {
+    font-size: 1.2rem;
+    margin-bottom: 45px;
+    max-width: 650px;
+  }
+
+  .start-button {
+    width: 210px;
+    height: 50px;
+    font-size: 0.75rem;
+  }
+
+  .help-link {
+    width: 210px;
+    height: 50px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .landing-header {
+    padding: 30px 28px;
+  }
+
+  .landing-title {
+    font-size: 2rem;
+  }
+
+  .landing-content {
+    padding: 45px 35px;
+    max-width: 750px;
+  }
+
+  .welcome-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .welcome-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  .start-button {
+    width: 200px;
+    height: 48px;
+    font-size: 0.7rem;
+  }
+
+  .help-link {
+    width: 200px;
+    height: 48px;
+    font-size: 0.7rem;
+  }
+
+  .help-icon-new {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+}
+
+/* Small Tablet (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .landing-header {
+    padding: 25px 24px;
+  }
+
+  .landing-title {
+    font-size: 1.8rem;
+  }
+
+  .landing-content {
+    padding: 40px 30px;
+    max-width: 95vw;
+    border-radius: 25px;
+  }
+
+  .welcome-heading {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+  }
+
+  .welcome-description {
+    font-size: 1.05rem;
+    margin-bottom: 38px;
+    max-width: 500px;
+  }
+
+  .landing-main {
+    padding: 0 20px;
+  }
+
+  .start-button {
+    width: 190px;
+    height: 46px;
+    font-size: 0.7rem;
+    padding: 0 32px;
+  }
+
+  .help-link {
+    width: 190px;
+    height: 46px;
+    font-size: 0.7rem;
+    padding: 0 32px;
+  }
+
+  .help-icon-new {
+    width: 17px;
+    height: 17px;
+    font-size: 9px;
+  }
+}
+
+/* Mobile Large (481px to 575px) */
+@media (min-width: 481px) and (max-width: 575px) {
+  .landing-header {
+    padding: 22px 20px;
+  }
+
+  .landing-title {
+    font-size: 1.6rem;
+  }
+
+  .landing-content {
+    padding: 35px 25px;
+    max-width: 95vw;
+    border-radius: 22px;
+  }
+
+  .welcome-heading {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+  }
+
+  .welcome-description {
+    font-size: 1rem;
+    margin-bottom: 35px;
+    max-width: 450px;
+  }
+
+  .landing-main {
+    padding: 0 18px;
+  }
+
+  .start-button {
+    width: 180px;
+    height: 44px;
+    font-size: 0.68rem;
+    padding: 0 30px;
+  }
+
+  .help-link {
+    width: 180px;
+    height: 44px;
+    font-size: 0.68rem;
+    padding: 0 30px;
+  }
+
+  .help-icon-new {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+}
+
+/* Mobile Medium (376px to 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+  .landing-header {
+    padding: 15px 12px;
+  }
+
+  .landing-title {
+    font-size: 1.5rem;
+  }
+
+  .landing-content {
+    padding: 25px 15px;
+    max-width: 98vw;
+    border-radius: 18px;
+  }
+
+  .welcome-heading {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .welcome-description {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+
+  .landing-main {
+    padding: 0 8px;
+  }
+
+  .start-button {
+    width: 170px;
+    height: 42px;
+    font-size: 0.65rem;
+    padding: 0 28px;
+  }
+
+  .help-link {
+    width: 170px;
+    height: 42px;
+    font-size: 0.65rem;
+    padding: 0 28px;
+  }
+
+  .help-icon-new {
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+  }
+}
+
+/* Mobile Small (320px to 375px) */
+@media (min-width: 320px) and (max-width: 375px) {
+  .landing-header {
+    padding: 12px 10px;
+  }
+
+  .landing-title {
+    font-size: 1.4rem;
+  }
+
+  .landing-content {
+    padding: 20px 12px;
+    max-width: 98vw;
+    border-radius: 16px;
+  }
+
+  .welcome-heading {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .welcome-description {
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+
+  .landing-main {
+    padding: 0 6px;
+  }
+
+  .start-button {
+    width: 160px;
+    height: 40px;
+    font-size: 0.6rem;
+    padding: 0 25px;
+  }
+
+  .help-link {
+    width: 160px;
+    height: 40px;
+    font-size: 0.6rem;
+    padding: 0 25px;
+  }
+
+  .help-icon-new {
+    width: 14px;
+    height: 14px;
+    font-size: 7px;
+  }
+}
+
+/* Mobile Extra Small (below 320px) */
+@media (max-width: 319px) {
+  .landing-header {
+    padding: 10px 8px;
+  }
+
+  .landing-title {
+    font-size: 1.2rem;
+  }
+
+  .landing-content {
+    padding: 18px 10px;
+    max-width: 98vw;
+    border-radius: 14px;
+  }
+
+  .welcome-heading {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .welcome-description {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .landing-main {
+    padding: 0 4px;
+  }
+
+  .start-button {
+    width: 150px;
+    height: 38px;
+    font-size: 0.55rem;
+    padding: 0 22px;
+  }
+
+  .help-link {
+    width: 150px;
+    height: 38px;
+    font-size: 0.55rem;
+    padding: 0 22px;
+  }
+
+  .help-icon-new {
+    width: 12px;
+    height: 12px;
+    font-size: 6px;
+  }
+}
+
+/* Add specific media query for 390px width (common mobile size) */
+@media (min-width: 390px) and (max-width: 430px) {
+  .landing-header {
+    padding: 15px 10px;
+  }
+
+  .landing-title {
+    font-size: 1.6rem;
+  }
+
+  .landing-content {
+    padding: 25px 15px;
+    max-width: 98vw;
+    border-radius: 18px;
+  }
+
+  .welcome-heading {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+  }
+
+  .welcome-description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+
+  .landing-main {
+    padding: 0 8px;
+  }
+
+  .start-button {
+    width: 180px;
+    height: 44px;
+    font-size: 0.7rem;
+    padding: 0 30px;
+  }
+
+  .help-link {
+    width: 180px;
+    height: 44px;
+    font-size: 0.7rem;
+    padding: 0 30px;
+  }
+
+  .help-icon-new {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,181 @@
+.game-info {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.light-score {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  text-align: center;
+  transition: all 0.4s ease !important;
+  opacity: 0.95;
+  padding: 12px 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.light-score.active {
+  opacity: 1;
+  border: 2px solid #4caf50 !important;
+  background: #e8f5e9 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+.light-score.winner {
+  opacity: 1;
+  border: 2px solid #ff9800 !important;
+  background: #fff3e0 !important;
+  animation: winner-glow 2s infinite;
+  transform: translateY(-3px);
+}
+
+.player-label {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.category-label {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2196f3;
+}
+
+.winner .score {
+  color: #ff9800;
+  animation: score-glow 1s infinite alternate;
+}
+
+.winner-badge {
+  background: #ff9800;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.light-turn {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  text-align: center;
+  padding: 15px !important;
+  margin-top: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.turn-label {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.winner-label {
+  color: #4caf50 !important;
+  font-size: 2.2rem;
+  font-weight: 800;
+  animation: winner-bounce 1.2s infinite alternate;
+}
+
+.current-emoji {
+  font-size: 2.5rem;
+  animation: emoji-float 2s infinite alternate;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  margin-top: 4px;
+}
+
+@keyframes winner-glow {
+  0% {
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.2) !important;
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4) !important;
+  }
+  100% {
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.2) !important;
+  }
+}
+
+@keyframes score-glow {
+  from {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    text-shadow: 2px 2px 8px rgba(255, 213, 79, 0.8);
+  }
+}
+
+@keyframes winner-bounce {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.05);
+  }
+}
+
+@keyframes emoji-float {
+  from {
+    transform: translateY(0) rotate(-5deg);
+  }
+  to {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .light-score {
+    padding: 10px 12px !important;
+  }
+
+  .light-turn {
+    padding: 12px !important;
+  }
+
+  .score {
+    font-size: 1.6rem;
+  }
+
+  .current-emoji {
+    font-size: 2rem;
+  }
+
+  .winner-label {
+    font-size: 1.8rem;
+  }
+
+  .player-label {
+    font-size: 1rem;
+  }
+
+  .category-label {
+    font-size: 0.9rem;
+  }
+
+  .turn-label {
+    font-size: 1.1rem;
+  }
+
+  .winner-badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
